@@ -190,7 +190,7 @@ public class AppCompartirCoche {
      * @return true si se ha creado correctamente
      */
     public static boolean crearViaje(String usuario, String fechaHora, String origen, String destino, int plazas) {
-        if (usuario.isEmpty() || fechaHora.isEmpty() || origen.isEmpty() || destino.isEmpty())
+        if (usuario.isEmpty() || fechaHora.isEmpty() || origen.isEmpty() || destino.isEmpty() || plazas <= 0)
             return false;
 
         Connection conexion = conectarBD();
