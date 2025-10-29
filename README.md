@@ -1,23 +1,35 @@
 # Compartir Coche
 
 Programa Java con BD para compartir desplazamientos
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Sobre el proyecto
 
-## Folder Structure
+El proyecto consiste en una aplicación de consola que utiliza una base de datos MySQL para almacenar los datos persistentes de usuarios, viajes, pasajeros, etc. 
 
-The workspace contains two folders by default, where:
+Para desarrolladores, el repositorio contiene:
+- Código fuente en la carpeta `src`
+- Estructura de la base de datos en `doc/compartircoche.sql`
+- Librerías necesarias en la carpeta `lib`
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-- 'doc': fichero compartircoche.sql con la estructura de la base de datos
-- 'index.html': documentación generada con Javadoc
+Para usuarios, el repositorio contiene: 
+- Fichero `Compartir-coche.jar` compilado con el JDK 25 que puede ejecutarse con el comando `java -jar Compartir-coche.jar`. Este ejecutable utiliza una base de datos de producción en Internet.
+- Fichero `Compartir-coche.bat`: script para facilitar la ejecución del programa desde el entorno de escritorio de Windows.
+- Fichero `Compartir-coche.sh`: script para facilitar la ejecución del programa desde el entorno de escritorio de Linux (Requerirá permisos de ejecución, `chmod +x Compartir-coche.sh`).
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Estructura de directorios
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+El repositorio contiene los siguientes directorios y ficheros:
 
-## Dependency Management
+- `src`: código fuente y tests
+- `lib`: librerías de dependencias del proyecto
+- `doc`: carpeta con documentación
+- - `compartircoche.sql`: fichero con la estructura de la base de datos
+- - `javadoc`: documentación generada con Javadoc
+- `Compartir-coche.jar`: Bytecode del programa compilado con JDK 25
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Librerías y Dependencias
+
+El proyecto utiliza las siguientes librerías que se incluyen en el repositorio:
+
+- `mysql-connector-j-9.5.0.jar`: Conector ODBC para bases de datos MySQL/MariaDB
+- `junit-platform-console-standalone-1.13.0-M3.jar`: Librería de pruebas unitarias JUnit 5

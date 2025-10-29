@@ -282,22 +282,13 @@ public class AppCompartirCoche {
      * @return Conexión con la base de datos
      */
     public static Connection conectarBD() {
-        // Datos de conexión a la base de datos de Desarrollo (localhost)
-        final String HOST = "localhost";
-        final String DATABASE = "compartircoche";
-        final String USER = "root";
-        final String PASSWORD = "";
-        final String PORT = "3306";
-
 
         Connection con = null;
 
-
-        String url = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE;
-
+        String url = "jdbc:mysql://" + ConexionDB.HOST + ":" + ConexionDB.PORT + "/" + ConexionDB.DATABASE;
 
         try {
-            con = DriverManager.getConnection(url, USER, PASSWORD);
+            con = DriverManager.getConnection(url, ConexionDB.USER, ConexionDB.PASSWORD);
         } catch (SQLException e) {
             System.out.println("Error al conectar con la BD.");
         }
